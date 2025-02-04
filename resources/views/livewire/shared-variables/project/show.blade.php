@@ -1,5 +1,8 @@
 <div>
-    <div class="flex gap-2">
+    <x-slot:title>
+        Project Variable | Coolify
+    </x-slot>
+    <div class="flex gap-2 items-center">
         <h1>Shared Variables for {{data_get($project,'name')}}</h1>
         <x-modal-input buttonTitle="+ Add" title="New Shared Variable">
             <livewire:project.shared.environment-variable.add :shared="true" />

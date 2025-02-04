@@ -4,7 +4,7 @@
     @else
         <form class="flex flex-col w-full gap-2" wire:submit='submit'>
             <div class="flex w-full gap-2 flex-wrap sm:flex-nowrap">
-                <x-forms.input autofocus id="name" label="Name" required />
+                <x-forms.input id="name" label="Name" required />
                 <x-forms.input id="description" label="Description" />
             </div>
             <div class="flex gap-2 flex-wrap sm:flex-nowrap">
@@ -31,7 +31,7 @@
             </div>
             <div class="">
                 <h3 class="pt-6">Swarm <span class="text-xs text-neutral-500">(experimental)</span></h3>
-                <div class="pb-4">Read the docs <a class='dark:text-white'
+                <div class="pb-4">Read the docs <a class='underline dark:text-white'
                         href='https://coolify.io/docs/knowledge-base/docker/swarm' target='_blank'>here</a>.</div>
                 @if ($is_swarm_worker || $is_build_server)
                     <x-forms.checkbox disabled instantSave type="checkbox" id="is_swarm_manager"
